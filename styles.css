@@ -1,0 +1,58 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 210% 210%;
+    animation: rainbowAnimation 5s linear infinite;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#apology-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: textAppear 4s forwards;
+}
+
+/* Text Fade-In Animation */
+@keyframes textAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Smooth Rainbow Background Animation */
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
